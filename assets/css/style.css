@@ -26,23 +26,27 @@ html {
 }
 
 .col {
+    float: left !important;
+}
+
+.col-pad {
     float: left;
     padding-left: 8px;
     padding-right: 8px;
-}
-
-.mt-8 {
-    margin-top: 8px !important;
-}
-
-.mt-16 {
-    margin-top: 16px !important;
 }
 
 .row::after {
     content: "";
     display: block;
     clear: both;
+}
+
+.row-padding {
+    padding: 0 8px;
+}
+
+.right {
+    float: right !important;
 }
 
 .full {
@@ -55,6 +59,14 @@ html {
 
 .third {
     width: 33.33333%;
+}
+
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
 }
 
 .pad-32 {
@@ -300,22 +312,22 @@ section {
 }
 
 /* Contact */
-.contact-body::after {
-    content: "";
+#contact .contact-body::after {
+    content: '';
     display: block;
     clear: both;
+}
+
+#contact .contact-info {
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 #contact .fas {
     width: 30px;
 }
 
-.contact-info {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.contact-form {
+#contact .contact-form {
     font-size: 15px;
 }
 
@@ -325,19 +337,14 @@ section {
     width: 100%;
 }
 
-.right {
-    float: right !important;
-}
-
-.contact-form .form-submit-btn {
+.submit-btn {
     background-color: #000;
     color: #fff;
+    padding: 9px 15px;
     border: none;
-    padding: 11px 17px;
-    margin-right: -8px;
 }
 
-.contact-form .form-submit-btn:hover {
+.submit-btn:hover {
     background-color: #ccc;
     color: #000;
     cursor: pointer;
