@@ -41,8 +41,10 @@ html {
     clear: both;
 }
 
-.row-padding {
-    padding: 0 8px;
+.col::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .right {
@@ -67,6 +69,11 @@ html {
 
 .mt-16 {
     margin-top: 16px;
+}
+
+.pad-8 {
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 .pad-32 {
@@ -318,33 +325,35 @@ section {
     clear: both;
 }
 
-#contact .contact-info {
+.contact-body .contact-info {
     font-size: 18px;
     line-height: 1.5;
 }
 
-#contact .fas {
+.contact-body .fas {
     width: 30px;
 }
 
-#contact .contact-form {
+.contact-form {
     font-size: 15px;
 }
 
 .contact-form .form-control {
     padding: 8px;
-    border: 1px solid #ccc;
     width: 100%;
+    line-height: 22.5px;
+    border: 1px solid #ccc;
 }
 
-.submit-btn {
+.contact-form .submit-btn {
+    padding: 9px 15px;
     background-color: #000;
     color: #fff;
-    padding: 9px 15px;
     border: none;
+    line-height: 22.5px;
 }
 
-.submit-btn:hover {
+.contact-form .submit-btn:hover {
     background-color: #ccc;
     color: #000;
     cursor: pointer;
