@@ -93,12 +93,12 @@ html {
 }
 
 #nav {
-    display: inline-block;
+    display: inline-block; /* chiếm 1 phần header, nút search không bị đẩy xuống dòng */
 }
 
 #nav li {
-    display: inline-block;
-    position: relative;
+    display: inline-block; /* li default là list */
+    position: relative; /* Để menu dropdown có position: absolute */
     font-size: 15px;
 }
 
@@ -111,7 +111,7 @@ html {
 
 #nav li a {
     text-decoration: none;
-    display: block;
+    display: block; /* khi hover thì line-height mới chiếm cả block */
 }
 
 #nav > li:hover > a,
@@ -121,12 +121,12 @@ html {
 }
 
 #nav > li:hover .subnav {
-    display: block;
+    display: block; /* Hiển thị dropdown menu khi hover */ 
 }
 
 #nav .subnav {
     display: none;
-    position: absolute;
+    position: absolute; /* dropdown theo thẻ li của nav */
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
@@ -136,10 +136,6 @@ html {
     line-height: 38.6px;
     padding: 0 16px;
     min-width: 160px;
-}
-
-#nav .subnav li:hover {
-    display: block;
 }
 
 #nav .fas {
@@ -311,11 +307,13 @@ section {
     padding: 10px 18px;
     text-decoration: none;
     color: #fff;
+    border: none;
 }
 
 .buy-btn:hover {
     background-color: #ccc;
     color: #000;
+    cursor: pointer;
 }
 
 /* Contact */
@@ -366,92 +364,101 @@ section {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     display: none;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .modal.open {
-    display: flex;
+    display: flex; /* mở modal */
 }
 
 .modal-container {
     background-color: #fff;
+    min-height: 300px;
     width: 900px;
-    max-width: calc(100% - 36px);
-    min-height: 200px;
+    max-width: calc(100% - 32px);
     position: relative;
+    animation: modalFadeIn ease .5s; /* hiện tgian modal xuống */
 }
 
 .modal-header {
     background-color: #009688;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
     color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.4;
+    padding: 44px 16px;
+    letter-spacing: 4px;
 }
 
 .modal-header .fas {
-    margin-right: 16px;
+    margin-right: 12px;
 }
 
 .modal-close {
     position: absolute;
     right: 0;
-    top: 0;
+    padding: 16px;
     color: #fff;
-    padding: 12px;
-    cursor: pointer;
-    opacity: 0.8;
 }
 
-.modal-close:hover {
-    opacity: 1;
+.modal-close:hover, .pay-btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
 }
 
 .modal-body {
-    padding: 16px;
+    padding: 8px 16px;
+    font-size: 15px;
 }
 
 .modal-label {
     display: block;
-    font-size: 15px;
+    margin-top: 16px;
+    margin-bottom: 8px;
 }
 
 .modal-input {
-    border: 1px solid #ccc;
     width: 100%;
-    font-size: 15px;
-    padding: 10px;
-    margin-top: 9px;
-    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 12px 11px;
+    margin-bottom: 8px;
 }
 
-button.buy-ticket:hover {
-    background-color: #ccc;
-    color: #000;
-}
-
-button.buy-ticket {
+.pay-btn {
+    width: 100%;
+    border: none;
     background-color: #009688;
     color: #fff;
-    width: 100%;
-    font-size: 15px;
-    padding: 18px;
-    border: none;
-    cursor: pointer;
+    padding: 19px 0;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
-.modal-help {
-    padding: 14px 16px;
+.modal-footer {
     text-align: right;
+    padding: 8px 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
-.modal-help a {
-    color: dodgerblue;
+.modal-footer a {
+    color: blue;
+}
+
+/* định dạng khi modal xuất hiện */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0.1;
+        transform: translateY(-110px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #footer {
