@@ -453,14 +453,45 @@ section {
 @keyframes modalFadeIn {
     from {
         opacity: 0.1;
-        transform: translateY(-110px);
+        transform: translateX(-150px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
-#footer {
+/* Map section */
+.map img {
+    width: 100%; /* để ảnh đo theo kích thước thẻ div */
+    filter: grayscale(50%);
+}
 
+/* Footer */
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+.footer-icon a {
+    font-size: 24px;
+    color: #000;
+    opacity: 0.6;
+}
+
+.footer-icon a:hover {
+    opacity: 0.4;
+}
+
+.copyright {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    color: #000;
+    opacity: 0.5;
+    font-size: 15px;
+}
+
+.copyright a {
+    color: #000;
+    opacity: 0.5;
 }
