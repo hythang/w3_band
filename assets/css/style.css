@@ -6,7 +6,9 @@
 
 html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    scroll-behavior: smooth;
 }
+
 /* Common */
 .clear {
     clear: both;
@@ -90,13 +92,14 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
+    overflow: hidden;
 }
 
 #nav {
     display: inline-block; /* chiếm 1 phần header, nút search không bị đẩy xuống dòng */
 }
 
-#nav li {
+#nav > li {
     display: inline-block; /* li default là list */
     position: relative; /* Để menu dropdown có position: absolute */
     font-size: 15px;
@@ -142,10 +145,12 @@ html {
     font-size: 91%;
 }
 
+#header .mobile-menu-btn,
 #header #search-button {
     float: right;
 }
 
+#header .mobile-menu-btn .fas,
 #header #search-button .fas {
     color: #fff;
     line-height: 46px;
@@ -154,6 +159,12 @@ html {
 
 #header #search-button:hover .fas {
     background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .mobile-menu-btn:hover .fas {
+    color: #000;
+    background-color: #ccc;
     cursor: pointer;
 }
 

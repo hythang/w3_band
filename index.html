@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Band</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/96/000000/music-band.png"/>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.css">
 </head>
 <body>
@@ -13,19 +15,19 @@
         <div id="header">
             <!--Begin nav-->
             <ul id="nav">
-                <li><a href="">Home</a></li>
-                <li><a href="">Band</a></li>
-                <li><a href="">Tour</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#band">Band</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="fas fa-caret-down"></i>
                     </a>
                     <ul class="subnav">
-                        <li><a href="">Merchandise</a></li>
-                        <li><a href="">Extras</a></li>
-                        <li><a href="">Media</a></li>
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
                     </ul>
                 </li>
             </ul>
@@ -34,6 +36,10 @@
             <!--Begin search button-->
             <div id="search-button">
                 <i class="fas fa-search"></i>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
             </div>
             <!--End button-->
         </div>
@@ -72,48 +78,48 @@
             
             <!--Tour section-->
             <div class="tour-section">
-            <section>
-            <div id="tour">
-                <h2 class="content-heading white-text">Tour dates</h2>
-                <p class="content-opacity white-text">Remember to book your tickets!</p>
-                <ul class="ticket">
-                    <li class="book-ticket">September <span class="sold-out">Sold out</span></li>
-                    <li class="book-ticket">October <span class="sold-out">Sold out</span></li>
-                    <li class="book-ticket">November <span class="quantity">3</span></li>
-                    <div class="clear"></div>
-                </ul>
-                <!--Places contact section-->
-                <div class="places-section row">
-                    <div class="col-pad third">
-                        <img src="/assets/img/content/place1/newyork.jpg" alt="New York" class="place-img">
-                        <div class="place-body">
-                            <p class="place-name"><b>New York</b></p>
-                            <p class="place-time">Fri 27 Nov 2016</p>
-                            <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo</p>
-                            <button href="" class="buy-btn js-buy-ticket">Buy Tickets</a>
+                <section>
+                <div id="tour">
+                    <h2 class="content-heading white-text">Tour dates</h2>
+                    <p class="content-opacity white-text">Remember to book your tickets!</p>
+                    <ul class="ticket">
+                        <li class="book-ticket">September <span class="sold-out">Sold out</span></li>
+                        <li class="book-ticket">October <span class="sold-out">Sold out</span></li>
+                        <li class="book-ticket">November <span class="quantity">3</span></li>
+                        <div class="clear"></div>
+                    </ul>
+                    <!--Places contact section-->
+                    <div class="places-section row">
+                        <div class="col-pad third">
+                            <img src="/assets/img/content/place1/newyork.jpg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <p class="place-name"><b>New York</b></p>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo</p>
+                                <button href="" class="buy-btn js-buy-ticket">Buy Tickets</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-pad third">
-                        <img src="/assets/img/content/place2/paris.jpg" alt="Paris" class="place-img">
-                        <div class="place-body">
-                            <p class="place-name"><b>Paris</b></p>
-                            <p class="place-time">Sat 28 Nov 2016</p>
-                            <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo</p>
-                            <button href="" class="buy-btn js-buy-ticket">Buy Tickets</a>
+                        <div class="col-pad third">
+                            <img src="/assets/img/content/place2/paris.jpg" alt="Paris" class="place-img">
+                            <div class="place-body">
+                                <p class="place-name"><b>Paris</b></p>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo</p>
+                                <button href="" class="buy-btn js-buy-ticket">Buy Tickets</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-pad third">
-                        <img src="/assets/img/content/place3/sanfran.jpg" alt="San Fracisco" class="place-img">
-                        <div class="place-body">
-                            <p class="place-name"><b>San Fracisco</b></p>
-                            <p class="place-time">Sun 29 Nov 2016</p>
-                            <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo</p>
-                            <button href="" class="buy-btn js-buy-ticket">Buy Tickets</a>
+                        <div class="col-pad third">
+                            <img src="/assets/img/content/place3/sanfran.jpg" alt="San Fracisco" class="place-img">
+                            <div class="place-body">
+                                <p class="place-name"><b>San Fracisco</b></p>
+                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo</p>
+                                <button href="" class="buy-btn js-buy-ticket">Buy Tickets</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            </section>
+                </section>
             </div>
 
             <!--Contact section-->
@@ -232,6 +238,30 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+
+        // Đóng/Mở mobile menu bar
+        let header = document.getElementById('header');
+        let mobileMenu = document.getElementById('mobile-menu');
+        let headerHeight = header.clientHeight; //lấy chiều cao header gán cho headerHeight
+        
+        mobileMenu.addEventListener('click', (event) => {
+            let isClosed = header.clientHeight === headerHeight; //nav menu ở mobile đóng khi header = 46px
+            if (isClosed) {
+                header.style.height = 'auto'; //đang đóng, khi bấm vào thì tự động hiện dài xuống
+            } else {
+                header.style.height = null; //đang mở, khi bấm vào thì mobile menu biến mất
+            }
+        })
+
+        // Tự động đóng khi chọn menu
+        let menuItems = document.querySelectorAll('#nav li a[href *= "#"]');
+        
+        for (let i = 0; i < menuItems.length; i++) {
+            let menuItem = menuItems[i]
+            menuItem.addEventListener('click', (event) => {
+                header.style.height = null;
+            })
+        }
     </script>
 </body>
 </html>
