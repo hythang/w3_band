@@ -92,7 +92,6 @@ html {
     left: 0;
     right: 0;
     z-index: 1;
-    overflow: hidden;
 }
 
 #nav {
@@ -132,6 +131,7 @@ html {
     position: absolute; /* dropdown theo thẻ li của nav */
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    list-style: none;
 }
 
 #nav .subnav li a {
@@ -143,6 +143,13 @@ html {
 
 #nav .fas {
     font-size: 91%;
+}
+
+#header .mobile-menu-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
 }
 
 #header .mobile-menu-btn,
@@ -218,7 +225,7 @@ section {
 #content .content-opacity {
     margin: 15px 0;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     font-style: italic;
     opacity: 0.6;
 }

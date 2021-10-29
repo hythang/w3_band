@@ -33,15 +33,15 @@
             </ul>
             <!--End nav-->
 
-            <!--Begin search button-->
-            <div id="search-button">
-                <i class="fas fa-search"></i>
-            </div>
-
+            <!--Mobile menu button-->
             <div id="mobile-menu" class="mobile-menu-btn">
                 <i class="fas fa-bars"></i>
             </div>
-            <!--End button-->
+
+            <!-- Search button -->
+            <div id="search-button">
+                <i class="fas fa-search"></i>
+            </div>
         </div>
 
         <div id="slider">
@@ -257,9 +257,17 @@
         let menuItems = document.querySelectorAll('#nav li a[href *= "#"]');
         
         for (let i = 0; i < menuItems.length; i++) {
-            let menuItem = menuItems[i]
+            let menuItem = menuItems[i];
+
             menuItem.addEventListener('click', (event) => {
-                header.style.height = null;
+                // tìm thẻ a nào có các thẻ con, và có con tên class là 'subnav'
+                let isParentMenu = menuItem.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav');
+                
+                if (isParentMenu) {
+                    event.preventDefault(); // bỏ qua mặc định, bấm vào thì không bị ẩn menu
+                } else {
+                    header.style.height = null; // ẩn menu
+                }
             })
         }
     </script>
