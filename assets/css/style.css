@@ -73,6 +73,14 @@ html {
     margin-top: 16px;
 }
 
+.mt-32 {
+    margin-top: 32px;
+}
+
+.mb-16 {
+    margin-bottom: 16px;
+}
+
 .pad-8 {
     padding-left: 8px;
     padding-right: 8px;

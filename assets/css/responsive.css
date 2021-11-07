@@ -10,9 +10,15 @@
 
 /* Mobile */
 @media (max-width: 740px) {
-    .s-col-full {
-        width: 100%;
+    .s-col-full, 
+    .s-full-width {
+        width: 100% !important;
     }
+
+    .s-mt-8 {
+        margin-top: 8px !important;
+    }
+    
     #header {
         overflow: hidden;
     }
@@ -49,5 +55,9 @@
     #nav .subnav li a {
         color: #fff;
         padding: 5px 41px;
+    }
+
+    .contact-form {
+        margin-top: 16px;
     }
 }
