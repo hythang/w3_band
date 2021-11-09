@@ -3,8 +3,37 @@
 
 }
 
+/* Mobile + tablet */
+@media (max-width: 1023px) {
+    .buy-btn {
+        padding: 16px 18px;
+    }
+
+    #nav .subnav li a {
+        padding: 5px 16px;
+    }
+
+    .contact-body .contact-info {
+        line-height: 2;
+    }
+
+    .contact-form .form-control {
+        padding: 12px;
+    }
+
+    .footer-icon a {
+        font-size: 30px;
+        margin: 0 10px;
+    }
+
+    .copyright {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+}
+
 /* Tablet */
-@media (min-width: 740px) and (max-qidth: 1023px) {
+@media (min-width: 740px) and (max-width: 1023px) {
     
 }
 
@@ -58,6 +87,6 @@
     }
 
     .contact-form {
-        margin-top: 16px;
+        margin-top: 32px;
     }
 }
