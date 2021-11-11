@@ -384,6 +384,8 @@ section {
     color: #fff;
     border: none;
     line-height: 22.5px;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .contact-form .submit-btn:hover {
